@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load app_tags %}
+
+{% block title %}{{ page_title }} | Styleguide{% endblock %}
+{% block content %}
+    <div class='container'>
+        <h6 class='text-center mt-4 tracking-4 opacity-70'>Styleguide</h6>
+        <nav class='flex flex-jc-center border-bottom flex-wrap'>
+            {% for item in STYLEGUIDE_MENU %}
+                <a class='inline-block no-focus p4' href='{{ item.url }}'>
+                    {{ item.title }}
+                </a>
+            {% endfor %}
+        </nav>
+
+        <div class='py-20 card-frame my-6 px-24 pt-10'>
+            {% block styleguide_content %}
+            {% endblock %}
+        </div>
+    </div>
+{% endblock %}

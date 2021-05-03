@@ -1,0 +1,26 @@
+{% if debug %}
+    <p class="text-xs fixed bottom-0 left-0 m2 px-2 py-1 bg-grey-20 rounded-1 inline-block">
+        <a
+            class="collapse-control"
+            href="#styleguide-menu"
+            class="color-text-black no-underline"
+        >
+            styleguide
+        </a>
+    </p>
+
+    <div
+        id='styleguide-menu'
+        class='collapse fixed bottom-0 left-0 ml-2 mb-10 px-2 py-1 bg-grey-5 rounded-1 text-xs'
+    >
+        <ul>
+            {% for item in menu %}
+                <li>
+                    <a href='{{ item.url }}' class='no-underline color-black'>
+                        &raquo; {{ item.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
