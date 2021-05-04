@@ -1,7 +1,7 @@
 from django import template
 from django.conf import settings
 
-from lib.octave_styleguide.octave_styleguide.utils import get_styleguide_menu
+from octave_styleguide.utils import get_styleguide_menu
 
 register = template.Library()
 

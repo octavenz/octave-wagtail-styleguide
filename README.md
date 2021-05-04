@@ -1,1 +1,1 @@
-# Wagtail Favicon
+# Octave Wagtail Styleguide
