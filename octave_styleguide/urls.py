@@ -1,7 +1,7 @@
 from django.urls import path
 from django.conf import settings
 
-from lib.octave_styleguide.octave_styleguide import views
+from octave_styleguide import views
 
 urlpatterns = []
 
