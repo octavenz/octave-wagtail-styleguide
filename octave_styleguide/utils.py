@@ -54,7 +54,7 @@ def get_routes_from_templates():
     template_list = []
 
     for template_dir in get_app_template_dirs('templates'):
-        if settings.ROOT_DIR in template_dir:
+        if settings.ROOT_DIR in str(template_dir):
             template_dir_list.append(template_dir)
 
     for template_dir in template_dir_list:
