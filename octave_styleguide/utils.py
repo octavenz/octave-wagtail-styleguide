@@ -61,7 +61,8 @@ def get_routes_from_templates():
         for base_dir, dirnames, filenames in os.walk(template_dir):
             if 'templates/styleguide' in base_dir:
                 for filename in filenames:
-                    template_list.append(filename.replace('.html', ''))
+                    if not filename.startswith('_'):  # allows files in the dir that will not be added to the menu
+                        template_list.append(filename.replace('.html', ''))
 
     return template_list
 

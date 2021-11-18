@@ -2,19 +2,34 @@
 {% load app_tags %}
 
 {% block styleguide_content %}
-    <h2>Icons</h2>
 
-    <div class="flex flex-wrap my-10">
-        {% for icon in ICONS %}
-           <div class='flex flex-column'>
-                <div title="{{ icon }}" class="w-16 h-16 inline-flex flex-jc-center flex-ai-center shadow-2 mt-4 mr-4">
-                    {% svg icon width="40px" height="40px" %}
-                </div>
-               <div class='text-xs'>
-                    {{ icon }}
-               </div>
+
+    <div class="container">
+        <div class="content-wrapper-width--narrow content-wrapper-align--left content-wrapper-vspace--small">
+
+            <h2>Icons</h2>
+
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="content-wrapper-width--narrow content-wrapper-align--left content-wrapper-vspace--large">
+
+            <div class="flex flex-wrap">
+                {% for icon in ICONS %}
+                   <div class='flex flex-column'>
+                        <div title="{{ icon }}" class="w-16 h-16 inline-flex flex-jc-center flex-ai-center shadow-2 mt-4 mr-4">
+                            {% svg icon width="40px" height="40px" %}
+                        </div>
+                       <div class='text-xs'>
+                            {{ icon }}
+                       </div>
+                    </div>
+                {% endfor %}
             </div>
-        {% endfor %}
+
+        </div>
     </div>
 
 {% endblock %}
